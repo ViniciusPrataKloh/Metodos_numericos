@@ -1,0 +1,11 @@
+unset key
+set grid
+set ylabel 'log e'
+set xlabel 'log dt'
+set yrange [17:20.5]
+set term png
+set output 'convergence-imp.png'
+g(x) = a*x+b
+fit g(x) 'log_implicit.dat' via a,b
+plot 'log_implicit.dat' w p pt 7 ps 1, \
+g(x) w l lc -1
