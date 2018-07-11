@@ -54,7 +54,7 @@ int implicitEuler(double* implicit, const int* t, const double n0, const double 
 
   implicit[0] = n0;
   for(count = 1; count <= (steps) + 1; count++){
-    implicit[count] = (1 / (1 - (cal_aux))) * implicit[count-1];
+    implicit[count] = (1 / (1 + (cal_aux))) * implicit[count-1];
   }
 
   pFile = fopen(file, "w");
