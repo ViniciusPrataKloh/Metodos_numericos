@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # ./euler [dt] [Tmax]
-./euler 100 20
+./euler 20 100
